@@ -1,0 +1,154 @@
+@font-face {
+	font-family: "AdiHaus";
+	src: URL("https://assets.codepen.io/6060109/adihaus_regular.ttf")
+		format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "AdiHaus";
+	src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf")
+		format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body,
+html {
+	min-width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	font-family: AdiHaus;
+}
+
+body {
+	display: flex;
+	background: url("/assets/new-bg.png");
+}
+
+.main-container {
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+#logo {
+	margin: 15px auto;
+	display: block;
+}
+
+#mobile-image {
+	background: url("/assets/mobile-shoes.jpg") no-repeat center;
+	background-size: cover;
+	height: 250px;
+	width: 100%;
+}
+
+.content-container {
+	padding: 20px 30px;
+}
+
+.text-container {
+	width: 100%;
+	text-align: center;
+}
+
+h2,
+p {
+	margin: 0;
+}
+
+h2 {
+	font-size: 48px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+p {
+	line-height: 28px;
+	margin: 20px 0 40px;
+	color: #333333;
+}
+
+h2:nth-of-type(1) {
+	color: #2f80ed;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+h2:nth-of-type(2) {
+	color: #423a3a;
+}
+
+form {
+	display: flex;
+}
+
+input[type="text"] {
+	width: 75%;
+	padding: 0 30px;
+	height: 50px;
+	background: transparent;
+	border: 1px solid #333;
+	border-radius: 3px;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+	width: 25%;
+	height: 50px;
+	background: center / 15% url("/assets/btn-icon.svg") no-repeat,
+		linear-gradient(
+			90deg,
+			rgba(2, 0, 36, 1) 0%,
+			rgba(9, 9, 121, 1) 35%,
+			rgba(0, 212, 255, 1) 100%
+		);
+	border: none;
+}
+
+.desktop-image {
+	display: none;
+}
+
+/*------ Media Queries ------  */
+
+@media only screen and (min-width: 768px) {
+	body {
+		background: url("/assets/new-bg.png");
+		background-size: cover;
+	}
+
+	.main-container {
+		width: 50%;
+	}
+
+	.text-container {
+		text-align: left;
+	}
+
+	#mobile-image {
+		display: none;
+	}
+
+	#logo {
+		margin: 30px 30px 100px;
+		display: block;
+	}
+
+	.desktop-image {
+		display: block;
+		width: 50%;
+		background: url("/assets/shoes.png");
+		background-size: cover;
+	}
+
+	h2 {
+		font-size: 64px;
+	}
+}
